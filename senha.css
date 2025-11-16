@@ -1,0 +1,214 @@
+/*PALETA DE CORES
+#2d3861 - Rhino ~"Azul Marinho"
+#8d8f50 - Barley Corn ~"Verde Musgo"
+#b8d444 - Conifer ~"Verde Limão"
+white - Branco
+lightgray - Cinza Claro
+
+TIPOGRAFIA
+Lexend, sans-serif
+*/
+
+@font-face {
+    font-family: Lexend, sans-serif;
+    src: url(styles/Lexend-Regular.ttf), format("truetype");
+    src: url(styles/Lexend-Bold.ttf), format("truetype");
+}
+
+* { 
+    font-family: Lexend, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body { 
+    background-image:
+    linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+    url('images/qualiseg-icon.png');
+    background-size: auto;background-position: left;
+    background-repeat: no-repeat;
+    background-position: left;
+  /* o degradê "clareia" a imagem; ajuste o alpha (0.6) para mais/menos efeito */
+    background-color: white;
+    font-size: 15px;
+    color: #2d3861;
+    margin: 0;
+    padding: 90px 0 90px 0; /* espaço superior para header fixo e inferior para footer fixo */
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+}
+
+header { 
+    display: flex;
+    position: fixed; /* fixa o header no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #2d3861;
+    background-size: cover;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 1100;
+}
+
+#logo { 
+    max-width: 120px;
+    width: auto;
+    height: auto;
+}
+
+#user { 
+    padding: 8px 12px;
+    background-color: transparent;
+    border: none;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-icon {
+    display: block;
+}
+
+#user:hover {
+    background-color: #b8d444;
+}
+
+button { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #2d3861;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+button:hover {
+    background-color: #b8d444;
+    color: #2d3861;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.container { 
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 700px;
+    padding: 50px;
+    margin: 0 auto; /* centraliza horizontalmente */
+    border-radius: 25px;
+    /* Sombra mais evidente: camadas suaves com maior blur e opacidade controlada */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* necessário para posicionar o pseudo-elemento de fundo */
+    overflow: hidden; /* evita que a imagem saia do container */
+}
+
+h1 { 
+    text-align: center;
+    font-size: clamp(24px, 5vw, 40px);
+    margin-bottom: 0;
+    color: #2d3861;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #2d3861;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #2d3861;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border: 1px solid #b8d444;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2d3861;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed; /* fixa o footer no final da janela */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Responsividade para Tablets */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    
+    header {
+        padding: 15px 30px;
+    }
+
+    footer {
+        padding: 15px 30px;
+    }
+}
+
+/* Responsividade para Desktop */
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    header {
+        padding: 15px 40px;
+    }
+
+    footer {
+        padding: 15px 40px;
+    }
+}
+
+/* Responsividade para telas muito grandes */
+@media (min-width: 1440px) {
+    .botoes {
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+    }
+}

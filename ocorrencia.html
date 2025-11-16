@@ -1,0 +1,57 @@
+<!DOCTYPE html><!--Definição do tipo de documento como HTML5-->
+<html lang="pt-br"><!--Definição do idioma como português do Brasil-->
+<head><!--Definição do cabeçalho do documento-->
+    <meta charset="UTF-8"><!--Definição da codificação de caracteres como UTF-8-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Configuração para responsividade em dispositivos móveis-->
+    <title>Qualiseg Consult</title><!--Título da página exibido na aba do navegador-->
+    <link rel="stylesheet" href="ocorrencia.css"><!--Link para o arquivo de estilo CSS-->
+</head><!--Fim do cabeçalho-->
+
+<body><!--Início do corpo do documento-->
+    <header><!--CABEÇALHO-->
+        <a href="servicos.html"><!--Link para a página inicial-->
+            <img src="images/qualiseg-white-horizontal-logo.png" alt="Logo Qualiseg Consultoria" width="120px" id="logo"><!--Logo da empresa-->
+        </a><!--Fim do link-->
+        
+        <a href="perfil.html"><!--Link para a página de perfil-->
+            <button id="user"><!--Botão de usuário-->
+            <img src="images/user-icon.png" alt="Ícone do usuário" width="30px" id="user-icon"><!--Ícone do usuário-->
+        </button><!--Fim do botão de usuário-->
+        </a>
+    </header><!--FIM DO CABEÇALHO-->
+
+    <div class="container"><!--Container principal-->
+        <h1>Registrar Ocorrência</h1><!--Título de boas-vindas-->
+        <br><!--Quebra de linha-->
+        <p>Sistema de Inspeções da Qualiseg Consultoria. Descreva a ocorrência abaixo:</p><!--Texto de introdução-->
+            <input id="descricao" type="text" placeholder="Insira as informações..."><!--Campo de entrada para descrição da ocorrência-->
+
+            <div class="attachment-row"><!--Campo para anexar arquivos-->
+                <label for="anexo" class="attach-label" title="Anexar arquivo"><!--Rótulo para o campo de anexar arquivo-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d405e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><!--Ícone de clipe de papel-->
+                        <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66L9.1 18.46a2 2 0 0 1-2.83-2.83l7.78-7.78" /><!--Caminho do ícone-->
+                    </svg><!--Fim do ícone-->
+                </label><!--Fim do rótulo-->
+                <input id="anexo" class="attach-input" type="file" aria-label="Anexar arquivo" /><!--Botão para selecionar arquivo-->
+                <span id="attachment-name" class="attach-name">Nenhum arquivo selecionado</span><!--Texto exibindo o nome do arquivo selecionado-->
+            </div><!--Fim do campo de anexar arquivos-->
+            <button id="enviar-btn">Enviar</button><!--Botão de envio-->
+            <hr><!--Linha horizontal-->
+            
+            <h1>Histórico</h1><!--Título da seção de histórico-->
+            <p>Consulte as ocorrências registradas:</p><!--Texto de introdução ao histórico-->
+
+        </div><!--Fim do container principal-->
+
+        <footer><!--RODAPÉ-->
+            <p><strong>QUALISEG CONSULTORIA
+            </strong><!--Estilo do texto em negrito-->
+            </p><!--Nome da empresa-->
+            <br><!--Quebra de linha-->
+            <p>Av. Dr. José Duarte Aguiar, 131, Garapu, Cabo de Santo Agostinho - PE</p><!--Endereço da empresa-->
+            <p>(81) 98491-6815 | jaciara@qualisegconsult.com</p><!--Contato da empresa-->
+        </footer><!--FIM DO RODAPÉ-->
+
+        <script src="ocorrencia.js" defer></script><!--Link para o arquivo de script JavaScript-->
+</body><!--Fim do corpo do documento-->
+</html><!--Fim do documento HTML-->
